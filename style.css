@@ -548,6 +548,35 @@ body {
   text-decoration: underline;
 }
 
+/* Custom styles for privacy-policy-section */
+.privacy-policy-section {
+    padding: 0 10px; /* Consistent with other sections */
+}
+
+.privacy-policy-section .card-body {
+    color: var(--text-secondary);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.privacy-policy-section h3 {
+    color: var(--accent-yellow);
+    font-size: 18px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.privacy-policy-section ul {
+    margin: 15px 0 15px 20px;
+    padding: 0;
+    list-style: disc;
+    color: var(--text-secondary);
+}
+
+.privacy-policy-section ul li {
+    margin-bottom: 8px;
+}
+
 /* Responsiveness */
 @media (min-width: 768px) {
   .header-content {
@@ -622,6 +651,7 @@ body {
     padding: 20px 25px;
   }
   .faq-answer {
+    max-height: 0; /* Ensures initial hiding */
     padding: 0 25px;
   }
   .faq-item.active .faq-answer {
@@ -636,6 +666,15 @@ body {
   .contact-info p {
     font-size: 16px;
   }
+    .privacy-policy-section {
+        padding: 0 20px; /* Consistent with other sections */
+    }
+    .privacy-policy-section .card-body {
+        font-size: 16px;
+    }
+    .privacy-policy-section h3 {
+        font-size: 20px;
+    }
 }
 
 /* Scrollbar personalizado para navegadores basados en WebKit (Chrome, Safari) */
