@@ -312,6 +312,53 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
     `;
 
+    // --- Contenido de Política de Privacidad ---
+    const privacyPolicyContentHTML = `
+        <div class="privacy-policy-section fade-in">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">🔒</div>
+                    <h2 class="card-title">Política de Privacidad</h2>
+                </div>
+                <div class="card-body">
+                    <p>Esta Política de Privacidad describe cómo "P2P Tools" (en adelante, "la Herramienta" o "nosotros") recopila, utiliza y protege la información cuando usted utiliza nuestra calculadora de margen y guía P2P de Binance.</p>
+
+                    <h3>1. Información que Recopilamos</h3>
+                    <p>La Herramienta es una aplicación web y de bot de Telegram diseñada para ayudar a los usuarios con cálculos y guías informativas. *No recopilamos ni almacenamos ningún dato personal identificable de los usuarios*. Todas las operaciones de cálculo se realizan en el lado del cliente (su navegador o el bot) y los datos ingresados no se guardan en nuestros servidores.</p>
+                    <ul>
+                        <li><strong>Datos de Uso (No Personales):</strong> Podemos recopilar información anónima sobre cómo se utiliza la Herramienta, como el tipo de navegador, el sistema operativo, las páginas visitadas y el tiempo dedicado a cada sección. Esto se hace únicamente con fines de mejora del servicio y no se asocia con ningún usuario individual.</li>
+                        <li><strong>Cookies:</strong> La Herramienta no utiliza cookies para el seguimiento de usuarios ni para almacenar preferencias.</li>
+                    </ul>
+
+                    <h3>2. Cómo Utilizamos la Información</h3>
+                    <p>La información no personal y agregada se utiliza para:</p>
+                    <ul>
+                        <li>Mejorar la funcionalidad y el rendimiento de la Herramienta.</li>
+                        <li>Analizar tendencias de uso para comprender mejor las necesidades de nuestros usuarios.</li>
+                        <li>Depurar y solucionar problemas técnicos.</li>
+                    </ul>
+
+                    <h3>3. Compartir Información con Terceros</h3>
+                    <p>Dado que no recopilamos datos personales, no compartimos ninguna información personal con terceros. La información de uso anónima y agregada puede ser utilizada para análisis interno, pero nunca se comparte de una manera que pueda identificar a un individuo.</p>
+
+                    <h3>4. Enlaces a Sitios Web de Terceros</h3>
+                    <p>La Herramienta puede contener enlaces a sitios web de terceros, como Binance o Telegram. No somos responsables de las prácticas de privacidad de estos sitios. Le recomendamos revisar las políticas de privacidad de cualquier sitio web de terceros antes de proporcionarles información personal.</p>
+
+                    <h3>5. Seguridad de los Datos</h3>
+                    <p>Aunque no almacenamos datos personales, nos comprometemos a proteger la integridad de nuestra Herramienta. Implementamos medidas de seguridad estándar para proteger contra el acceso no autorizado o la alteración de la información de la Herramienta.</p>
+
+                    <h3>6. Cambios en esta Política de Privacidad</h3>
+                    <p>Nos reservamos el derecho de actualizar o modificar esta Política de Privacidad en cualquier momento. Cualquier cambio será publicado en esta página con la fecha de la última actualización. Se recomienda revisar esta política periódicamente para estar informado sobre cómo protegemos su información.</p>
+
+                    <h3>7. Contacto</h3>
+                    <p>Si tiene alguna pregunta o inquietud sobre esta Política de Privacidad, puede contactarnos a través de los datos proporcionados en la sección de "Contacto y FAQ" de nuestra página.</p>
+
+                    <p><em>Última actualización: 23 de junio de 2025</em></p>
+                </div>
+            </div>
+        </div>
+    `;
+
     // --- Datos de la P2Pedia ---
     const p2pediaArticles = {
         'guia-completa': {
@@ -651,6 +698,8 @@ document.addEventListener("DOMContentLoaded", () => {
             contentHTML = p2pediaContentHTML;
         } else if (tabName === 'contact') {
             contentHTML = contactContentHTML;
+        } else if (tabName === 'privacy-policy') { // Nueva pestaña de política de privacidad
+            contentHTML = privacyPolicyContentHTML;
         }
         appContent.innerHTML = contentHTML;
         appContent.classList.add('fade-in');
@@ -662,6 +711,9 @@ document.addEventListener("DOMContentLoaded", () => {
             initializeP2Pedia();
         } else if (tabName === 'contact') {
             initializeContactAndFAQ();
+        } else if (tabName === 'privacy-policy') {
+            // No hay funciones de inicialización específicas para la política de privacidad,
+            // pero podríamos añadir alguna si fuera necesario en el futuro.
         }
     }
 
@@ -783,7 +835,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         // Cargar la primera sección por defecto al inicializar P2Pedia
-        showP2PediaSection('guia-completa');
+        showP2pediaSection('guia-completa');
     }
 
     // --- Funciones para Contacto y FAQ ---
