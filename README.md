@@ -39,11 +39,4 @@ Here's a breakdown of the modifications made to the core files:
 1.  **Replace Files:** Replace your existing `index.html`, `script.js`, and `style.css` files with the updated versions provided.
 2.  **Clear Cache:** Advise users to clear their browser cache (Ctrl+F5 or Cmd+Shift+R) to ensure they load the latest versions of the files.
 
-## Future Enhancements
-
-* **Persistent Ngrok URL:** Consider obtaining a stable domain or a paid ngrok plan if you intend for the web application to be publicly accessible long-term, as the current ngrok free URL changes.
-* **Advanced State Management:** For highly complex calculator interactions, exploring more advanced JavaScript state management patterns might be beneficial.
-
----
-
 This README should effectively communicate the changes to anyone reviewing your project.
